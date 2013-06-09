@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" template="/layout/template.xhtml">
+
+    <ui:param name="showGlobalMessages" value="false"/>
+
+    <ui:define name="body">
+
+        <div class="alert alert-error">
+            <h1>#{messages['view.denied.headline']}</h1>
+        </div>
+
+    </ui:define>
+</ui:composition>
+</html>
