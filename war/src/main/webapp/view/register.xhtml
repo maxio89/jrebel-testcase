@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <ui:composition xmlns="http://www.w3.org/1999/xhtml" xmlns:ui="http://java.sun.com/jsf/facelets" xmlns:h="http://java.sun.com/jsf/html" xmlns:rich="http://richfaces.org/rich"
-                xmlns:f="http://java.sun.com/jsf/core" xmlns:a4j="http://richfaces.org/a4j" xmlns:cu="http://java.sun.com/jsf/composite/components" xmlns:itc="http://it-crowd.com.pl/jsf" template="/layout/template.xhtml">
+                xmlns:f="http://java.sun.com/jsf/core" xmlns:a4j="http://richfaces.org/a4j" xmlns:cu="http://java.sun.com/jsf/composite/components"
+                xmlns:itc="http://it-crowd.com.pl/jsf" template="/layout/template.xhtml">
 
     <ui:define name="body">
 
@@ -43,6 +44,12 @@
                         </h:inputSecret>
                     </cu:edit>
                     <hr/>
+
+                    <cu:edit id="foo" label="foo">
+                        <h:inputSecret id="i" value="#{registerView.foo}" required="true">
+                            <rich:validator/>
+                        </h:inputSecret>
+                    </cu:edit>
 
                     <cu:editVertical id="country" label="#{domain['User.country']}">
                         <h:selectOneMenu id="i" value="#{registerView.selectedCountry}" required="true" styleClass="input-xlarge">
