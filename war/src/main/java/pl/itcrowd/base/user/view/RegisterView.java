@@ -33,6 +33,8 @@ public class RegisterView implements Serializable {
 
     private CountryList countryList;
 
+    private String foo;
+
     public RegisterView()
     {
     }
@@ -96,5 +98,15 @@ public class RegisterView implements Serializable {
             this.countries = countryList.getResultList();
         }
         return countries;
+    }
+
+    public String getFoo()
+    {
+        return foo;
+    }
+
+    public void setFoo(String foo)
+    {
+        this.foo = foo;
     }
 }
